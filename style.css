@@ -311,7 +311,7 @@ button {
     cursor: pointer;
 }
 
-.r3>div:hover{
+.r3>div:hover {
     box-shadow: 0 0 5px royalblue;
 }
 
@@ -594,23 +594,25 @@ footer>p {
         width: 60%;
     }
 
-    /*footer css*/
-    .wrapper3 {
-        flex-direction: column;
+    .r3>div>p {
+        width: 90%;
     }
+}
 
-    .l4>pre {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/*footer css*/
+.wrapper3 {
+    flex-direction: column;
+}
 
-    .r4 {
-        margin: 0;
-    }
+.l4>pre {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-
+.r4 {
+    margin: 0;
 }
 
 
@@ -808,6 +810,10 @@ footer>p {
 
     .r3>div {
         width: 70%;
+    }
+
+    .r3>div>p {
+        width: 95%;
     }
 
     /*footer css*/
