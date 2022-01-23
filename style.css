@@ -380,6 +380,7 @@ span:hover {
     font-size: 10px;
     font-weight: 600;
     margin-left: 30px;
+    margin-top: -15px;
 }
 
 .l4>pre>span {
@@ -413,13 +414,12 @@ footer>p {
     height: 64px;
     width: 64px;
     cursor: pointer;
-    -webkit-user-drag: none;
-    user-select: none;
 }
 
 .l4>a {
     font-size: 30px;
     margin-top: 10px;
+    margin-left: 40px;
 }
 
 
@@ -597,24 +597,23 @@ footer>p {
     .r3>div>p {
         width: 90%;
     }
-}
 
-/*footer css*/
-.wrapper3 {
-    flex-direction: column;
-}
+    /*footer css*/
+    .wrapper3 {
+        flex-direction: column;
+    }
 
-.l4>pre {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .l4>pre {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.r4 {
-    margin: 0;
+    .r4 {
+        margin: 0;
+    }
 }
-
 
 /*media 370 --> 240*/
 @media (max-width: 370px) and (min-width: 240px) {
