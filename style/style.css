@@ -12,11 +12,12 @@ body {
 }
 
 /*header nav bar css*/
-.nav-bar-mob {
+.nav-bar-mob,
+.nav-icon {
     display: none;
 }
 
-.nav-bar-desk {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,7 +26,11 @@ body {
     width: 100%;
     position: sticky;
     top: 0;
-    box-shadow: 0 0 5px #000;
+    transition: 1.5s;
+}
+
+.header-shadow {
+    box-shadow: 0px 15px 10px -15px black;
 }
 
 a {
@@ -35,36 +40,45 @@ a {
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     transition: 1s;
+    cursor: pointer;
 }
 
 
-.nav-bar-desk>a {
+header>a {
     font-size: 30px;
     padding: 15px 70px;
     transition: 1s;
 }
 
-.nav-bar-desk>a:hover {
+header>a:hover {
     color: cornflowerblue;
     transform: scale(1.1);
 }
 
 
-nav {
+.nav-bar-desk {
     padding: 0 60px;
 }
 
-nav>a {
+.nav-bar-desk>a {
     margin-left: 20px;
 }
 
-nav>a:hover {
+.nav-bar-desk>a:hover {
     color: cornflowerblue;
+}
+
+.nav-bar-mob>a:hover {
+    color: cornflowerblue;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1);
 }
 
 /*home css*/
 
-.home {
+#home {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +121,6 @@ nav>a:hover {
 .pre-title1,
 .pre-title2 {
     font-size: 25px;
-    margin-top: 10px;
     width: 80%;
     padding-bottom: 5px;
 }
@@ -120,7 +133,7 @@ nav>a:hover {
 .wrapper1 {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .wrapper1>input,
@@ -154,7 +167,7 @@ button {
 
 /*about css*/
 
-.about {
+#about {
     background-color: #f4e7e1;
     display: flex;
     align-items: center;
@@ -192,7 +205,7 @@ button {
 
 /*feautures css*/
 
-.feautures {
+#feautures {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,7 +223,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .box-container>div {
@@ -276,7 +289,7 @@ button {
 /*records css*/
 
 
-.records {
+#records {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -427,72 +440,64 @@ footer>p {
 @media (max-width: 999px) and (min-width: 370px) {
 
     .nav-icon {
-        height: 60px;
-        width: 60px;
-        margin-top: 5px;
-        margin-right: 5px;
+        display: flex;
+        margin-right: 15px;
+        height: 30px;
+        width: 30px;
         cursor: pointer;
         transition: 1s;
     }
 
-    .nav-bar-mob>a {
-        width: 100%;
-        font-size: 30px;
-        padding: 15px 10px;
-        transition: 1s;
+    header>a {
+        font-size: 23px;
+        padding-left: 15px;
     }
 
-    .nav-bar-mob>a:hover {
-        color: cornflowerblue;
-        transform: scale(1.02);
+    .nav-bar-mob {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 8%;
+        width: 100%;
+        left: -100%;
+        height: 240px;
+        background-color: rgb(251, 255, 251);
+        transition: 1.5s;
+    }
+
+    .nav-bar-mob-add {
+        left: 0;
+    }
+
+    .nav-bar-mob>a {
+        font-size: 25px;
+        padding: 10px 5px;
+        transition: 1s;
+        margin-left: 10px;
+        font-weight: 400;
     }
 
     .nav-bar-desk {
         display: none;
     }
 
-    .nav-icon:hover {
-        transform: scale(1.1);
-    }
-
-    .nav-bar-mob {
-        display: flex;
-        background-color: rgb(251, 255, 251);
-        width: 100%;
-        position: fixed;
-        box-shadow: 0 0 5px #000;
-    }
-
-    nav {
-        display: none;
-        transition: 1s;
-    }
-
-    .nav-bar-mob>nav>a {
-        font-size: 70px;
-    }
-
-    .checkbox {
-        display: none;
-    }
-
-    .checkbox:checked~nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        top: 8%;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(251, 255, 251);
-        position: fixed;
+    .title1,
+    .title2,
+    .title3,
+    .title4 {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
 
     /*home css*/
-    .home {
+    #home {
         flex-direction: column;
         width: 100%;
+        padding-top: 0;
+        padding-top: 0;
     }
 
     .r1 {
@@ -528,13 +533,14 @@ footer>p {
     }
 
     /*about css*/
-    .about {
+    #about {
         flex-direction: column-reverse;
         width: 100%;
     }
 
     .l2 {
         width: 100%;
+        margin-top: -30px;
     }
 
     .pre-title2,
@@ -543,7 +549,7 @@ footer>p {
     }
 
     /*feautures css*/
-    .feautures {
+    #feautures {
         width: 100%;
     }
 
@@ -573,7 +579,7 @@ footer>p {
     }
 
     /*records css*/
-    .records {
+    #records {
         width: 100%;
     }
 
@@ -588,6 +594,7 @@ footer>p {
 
     .pre-title3 {
         padding: 0 10px;
+        margin-bottom: 15px;
     }
 
     .r3>div {
@@ -620,76 +627,65 @@ footer>p {
 }
 
 /*media 370 --> 240*/
-@media (max-width: 370px) and (min-width: 240px) {
+@media (max-width: 370px) and (min-width: 300px) {
     .nav-icon {
-        height: 50px;
-        width: 50px;
-        margin-top: 5px;
-        margin-right: 5px;
+        display: flex;
+        margin-right: 15px;
+        height: 25px;
+        width: 25px;
         cursor: pointer;
         transition: 1s;
     }
 
-    .nav-bar-mob>a {
-        width: 100%;
-        font-size: 20px;
-        padding: 15px 10px;
-        transition: 1s;
-    }
-
-    .nav-bar-mob>a:hover {
-        color: cornflowerblue;
-        transform: scale(1.02);
-    }
-
-    .nav-icon:hover {
-        transform: scale(1.1);
-    }
-
     .nav-bar-mob {
-        width: 100%;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-        background-color: rgb(251, 255, 251);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
         position: fixed;
-        box-shadow: 0 0 5px #000;
+        top: 8%;
+        width: 100%;
+        left: -100%;
+        height: 190px;
+        background-color: rgb(251, 255, 251);
+        transition: 1.5s;
+    }
+
+
+    .title1,
+    .title2,
+    .title3,
+    .title4 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .nav-bar-mob-add {
+        left: 0;
+    }
+
+    .nav-bar-mob>a {
+        font-size: 18px;
+        padding: 10px 5px;
+        transition: 1s;
+        margin-left: 10px;
+        font-weight: 400;
     }
 
     .nav-bar-desk {
         display: none;
     }
 
-    nav {
-        display: none;
+    header>a {
+        font-size: 20px;
+        padding-left: 12px;
     }
-
-    .nav-bar-mob>nav>a {
-        font-size: 40px;
-    }
-
-    .checkbox {
-        display: none;
-    }
-
-    .checkbox:checked~nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 7%;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(251, 255, 251);
-    }
-
 
     /*home css*/
-    .home {
+    #home {
         flex-direction: column;
         width: 100%;
+        padding-top: 0;
     }
 
     .r1 {
@@ -728,7 +724,7 @@ footer>p {
     }
 
     /*about css*/
-    .about {
+    #about {
         flex-direction: column-reverse;
         width: 100%;
     }
@@ -744,10 +740,11 @@ footer>p {
     .pre-title2,
     .pre-title3 {
         font-size: 20px;
+        padding-bottom: 5px;
     }
 
     /*feautures css*/
-    .feautures {
+    #feautures {
         width: 100%;
     }
 
@@ -763,6 +760,7 @@ footer>p {
     .pre-title3 {
         font-size: 20px;
         padding: 0 10px;
+        margin-bottom: 5px;
     }
 
     .box-container>div {
@@ -797,7 +795,7 @@ footer>p {
     }
 
     /*records css*/
-    .records {
+    #records {
         width: 100%;
     }
 
@@ -847,296 +845,68 @@ footer>p {
 
 
 /*media 240 --> 175*/
-@media (max-width: 240px) and (min-width: 175px) {
+@media (max-width: 300px) and (min-width: 100px) {
+
+    header>a {
+        display: none
+    }
+
+    header {
+        justify-content: center;
+    }
+
     .nav-icon {
-        height: 50px;
-        width: 50px;
-        margin-top: 5px;
+        display: flex;
+        height: 25px;
+        width: 25px;
+        margin: 5px 0;
         cursor: pointer;
         transition: 1s;
     }
 
-    .nav-bar-mob>a {
-        display: none;
-    }
-
-    .nav-bar-mob>a:hover {
-        color: cornflowerblue;
-        transform: scale(1.02);
-    }
-
-    .nav-icon:hover {
-        transform: scale(1.1);
-    }
-
     .nav-bar-mob {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: right;
-        background-color: rgb(251, 255, 251);
-        position: fixed;
-        box-shadow: 0 0 5px #000;
-    }
-
-    .nav-bar-desk {
-        display: none;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .nav-bar-mob>nav>a {
-        font-size: 30px;
-    }
-
-    .checkbox {
-        display: none;
-    }
-
-    .checkbox:checked~nav {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
         position: fixed;
-        top: 7%;
+        top: 5%;
         width: 100%;
-        height: 100%;
+        left: -100%;
+        height: 170px;
         background-color: rgb(251, 255, 251);
+        transition: 1.5s;
     }
 
-
-    /*home css*/
-    .home {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .r1 {
-        align-items: center;
-        justify-content: center;
-    }
-
-    .title1 {
-        text-align: center;
-        font-size: 30px;
-    }
-
-    .pre-title1 {
-        text-align: center;
-        font-size: 20px;
-    }
-
-    .wrapper1 {
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding-bottom: 15px;
-    }
-
-    .wrapper1>input {
-        width: 70%;
-        padding: 0 5px;
-    }
-
-    .wrapper1>button {
-        background-color: rgb(87, 87, 253);
-        color: white;
-        width: 80px;
-        margin: -10px 0 5px 5px;
-        cursor: pointer;
-        transition: 0.8s;
-    }
-
-    /*about css*/
-    .about {
-        flex-direction: column-reverse;
-        width: 100%;
-    }
-
-    .l2 {
-        width: 100%;
-    }
-
-    .title2 {
-        font-size: 35px;
-    }
-
-    .pre-title2,
-    .pre-title3 {
-        font-size: 20px;
-    }
-
-    /*feautures css*/
-    .feautures {
-        width: 100%;
-    }
-
-    .box-container {
-        flex-direction: column;
-    }
-
-    .title3 {
-        text-align: center;
-        font-size: 30px;
-    }
-
-    .pre-title3 {
-        font-size: 20px;
-        padding: 0 10px;
-    }
-
-    .box-container>div {
-        width: 90%;
-    }
-
-    .box-container>div>p {
-        font-size: 20px;
-    }
-
-    .box-container>div>h3 {
-        font-size: 20px;
-    }
-
-    .box-container>div>button {
-        margin-bottom: 10px;
-    }
-
-    .icon2,
-    .icon1,
-    .icon3 {
-        display: none;
-    }
-
-    .box1 {
-        margin-left: 0;
-    }
-
-    .box3 {
-        margin-right: 0;
-    }
-
-    /*records css*/
-    .records {
-        width: 100%;
-    }
-
-    .r3 {
-        flex-direction: column;
-        margin-bottom: 10px;
-    }
-
+    .title1,
+    .title2,
+    .title3,
     .title4 {
-        text-align: center;
-        font-size: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-    .r3>div>p {
-        text-align: center;
-        font-size: 25px;
-        line-height: 30px;
-        width: 100%;
-    }
-
-    .r3>div {
-        width: 70%;
-    }
-
-    /*footer css*/
-    .wrapper3 {
-        flex-direction: column;
-    }
-
-    .l4>pre {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .l4>a {
-        font-size: 20px;
-    }
-
-    .r4 {
-        margin: 0;
-        flex-direction: column;
-    }
-
-    .l4>a {
-        margin-left: 0px;
-    }
-}
-
-/*media 175 --> 50*/
-
-@media (max-width: 175px) and (min-width: 50px) {
-    .nav-icon {
-        height: 50px;
-        width: 50px;
-        margin-top: 5px;
-        cursor: pointer;
-        transition: 1s;
+    .nav-bar-mob-add {
+        left: 0;
     }
 
     .nav-bar-mob>a {
-        display: none;
-    }
-
-    .nav-bar-mob>a:hover {
-        color: cornflowerblue;
-        transform: scale(1.02);
-    }
-
-    .nav-icon:hover {
-        transform: scale(1.1);
-    }
-
-    .nav-bar-mob {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: right;
-        background-color: rgb(251, 255, 251);
-        position: fixed;
-        box-shadow: 0 0 5px #000;
+        font-size: 15px;
+        padding: 10px 5px;
+        transition: 1s;
+        margin-left: 10px;
+        font-weight: 400;
     }
 
     .nav-bar-desk {
         display: none;
     }
 
-    nav {
-        display: none;
-    }
-
-    .checkbox {
-        display: none;
-    }
-
-    .nav-bar-mob>nav>a {
-        font-size: 15px;
-    }
-
-    .checkbox:checked~nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 7%;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(251, 255, 251);
-    }
-
-
     /*home css*/
-    .home {
+    #home {
         flex-direction: column;
         width: 100%;
+        padding-top: 0;
     }
 
     .r1 {
@@ -1158,6 +928,7 @@ footer>p {
         align-items: center;
         flex-direction: column;
         padding-bottom: 15px;
+        margin-top: 0;
     }
 
     .wrapper1>input {
@@ -1175,7 +946,7 @@ footer>p {
     }
 
     /*about css*/
-    .about {
+    #about {
         flex-direction: column-reverse;
         width: 100%;
     }
@@ -1184,20 +955,22 @@ footer>p {
         width: 100%;
     }
 
-    .l2>button {
-        padding: 10px;
-    }
-
     .title2 {
         font-size: 20px;
     }
 
     .pre-title2 {
         font-size: 10px;
+        margin-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .l2>button {
+        padding: 0px 5px;
     }
 
     /*feautures css*/
-    .feautures {
+    #feautures {
         width: 100%;
     }
 
@@ -1214,6 +987,11 @@ footer>p {
     .pre-title3 {
         font-size: 20px;
         padding: 0 10px;
+        margin-bottom: 5px;
+    }
+
+    .box-container {
+        margin-top: 5px;
     }
 
     .box-container>div {
@@ -1222,6 +1000,7 @@ footer>p {
 
     .box-container>div>p {
         font-size: 10px;
+        padding: 10px 7px;
     }
 
     .box-container>div>h3 {
@@ -1230,6 +1009,7 @@ footer>p {
 
     .box-container>div>button {
         margin-bottom: 10px;
+        margin-top: 5px;
     }
 
     .icon2,
@@ -1247,7 +1027,7 @@ footer>p {
     }
 
     /*records css*/
-    .records {
+    #records {
         width: 100%;
     }
 
