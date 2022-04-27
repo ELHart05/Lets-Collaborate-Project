@@ -25,3 +25,5 @@ function ShadowAdd() {
         NavMob.classList.remove('header-shadow');
     }
 }
+
+window.addEventListener('scroll',ShadowAdd);
