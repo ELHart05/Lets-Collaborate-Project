@@ -26,4 +26,4 @@ function ShadowAdd() {
     }
 }
 
-window.addEventListener('scroll',ShadowAdd);
+window.addEventListener('scroll', ShadowAdd);
