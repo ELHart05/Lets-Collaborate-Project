@@ -1,6 +1,6 @@
 # Let's Collaborate Project
 
-![WEBSITE](https://user-images.githubusercontent.com/96151694/154663535-f383af9e-efe9-402b-a79a-e2d66b6f1465.png)
+![_C__Users_okbaa_Desktop_HTML%20CSS%20JS_COLLABOTION inc%20Website%20Project_index html](https://user-images.githubusercontent.com/96151694/165545223-55202cd9-22a2-45ac-8771-f46218b399a8.png)
 
 Simple Page Style With HTML CSS Only ...
 
