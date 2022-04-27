@@ -390,10 +390,14 @@ span:hover {
 
 .l4>pre {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 5px;
+    font-size: 15px;
     font-weight: 600;
-    margin-top: -15px;
+    margin: -15px 0 0 15px;
     padding: 0;
+}
+
+.trademarks {
+    font-size: 18px;
 }
 
 .l4>pre>span {
@@ -430,7 +434,7 @@ footer>p {
 }
 
 .l4>a {
-    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 40px;
 }
 
