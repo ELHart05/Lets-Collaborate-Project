@@ -640,7 +640,7 @@ footer>p {
     }
 
     .l4>a {
-        margin-left: 0px;
+        margin: 10px 0 0 0;
     }
 }
 
@@ -857,17 +857,15 @@ footer>p {
         align-items: center;
     }
 
-    .l4>a {
-        font-size: 20px;
-    }
-
     .r4 {
         margin: 0;
         flex-direction: column;
     }
 
+    
     .l4>a {
-        margin-left: 0px;
+        font-size: 20px;
+        margin: 10px 0 0 0;
     }
 }
 
@@ -1125,6 +1123,7 @@ footer>p {
     }
 
     .l4>a {
-        margin-left: 0px;
+        font-size: 20px;
+        margin: 10px 0 0 0;
     }
 }
