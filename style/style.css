@@ -439,7 +439,6 @@ footer>p {
 
 .l4>a {
     margin-bottom: 10px;
-    margin-left: 20px;
 }
 
 
@@ -626,6 +625,10 @@ footer>p {
     /*footer css*/
     .wrapper3 {
         flex-direction: column;
+    }
+
+    .l4 {
+        margin-left: 0;
     }
 
     .l4>pre {
@@ -850,6 +853,10 @@ footer>p {
         flex-direction: column;
     }
 
+    .l4 {
+        margin-left: 0;
+    }
+
     .l4>pre {
         margin: 0;
         display: flex;
@@ -862,7 +869,7 @@ footer>p {
         flex-direction: column;
     }
 
-    
+
     .l4>a {
         font-size: 20px;
         margin: 10px 0 0 0;
@@ -1106,6 +1113,10 @@ footer>p {
         flex-direction: column;
     }
 
+    .l4 {
+        margin-left: 0;
+    }
+
     .l4>pre {
         margin: 0;
         display: flex;
@@ -1115,6 +1126,10 @@ footer>p {
 
     .l4>a {
         font-size: 20px;
+    }
+
+    .l4 {
+        margin-left: 0;
     }
 
     .r4 {
