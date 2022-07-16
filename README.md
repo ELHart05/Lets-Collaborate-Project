@@ -1,6 +1,6 @@
 # Let's Collaborate Project
 
-![screenshot](https://user-images.githubusercontent.com/96151694/179357096-039f38f2-fe4a-4d55-897d-f5e1253ae523.png)
+![screenshot](https://user-images.githubusercontent.com/96151694/179357817-f4e60ee5-6232-45cf-8996-b698bd2fb77b.png)
 
 Simple Page Style With HTML CSS Only ...
 
