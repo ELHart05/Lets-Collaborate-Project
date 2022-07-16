@@ -506,6 +506,8 @@ footer>p {
         padding-left: 10px;
         padding-right: 10px;
         margin-left: 0;
+        text-align: center;
+        line-height: 45px;
     }
 
     .pre-title1,
@@ -528,8 +530,6 @@ footer>p {
     }
 
     .title1 {
-        text-align: center;
-        line-height: 45px;
         margin: 10px 0;
     }
 
@@ -573,7 +573,7 @@ footer>p {
 
     .pre-title2,
     .pre-title3 {
-        padding: 0px 20px 15px 20px;
+        padding: 15px 20px;
         text-align: center;
     }
 
@@ -587,9 +587,7 @@ footer>p {
     }
 
     .title3 {
-        text-align: center;
         padding: 10px;
-        line-height: 45px;
     }
 
     .box-container>div {
@@ -619,13 +617,9 @@ footer>p {
         margin-bottom: 10px;
     }
 
-    .title4 {
-        text-align: center;
-    }
-
     .pre-title3 {
         padding: 0 10px;
-        margin-bottom: 25px;
+        margin: 10px 0 15px 0;
     }
 
     .r3>div {
@@ -689,6 +683,13 @@ footer>p {
         padding-left: 12px;
     }
 
+    .title1,
+    .title2,
+    .title3,
+    .title4 {
+        line-height: 35px;
+    }
+
     /*home*/
 
     .title1 {
@@ -719,11 +720,16 @@ footer>p {
 
     .title2 {
         font-size: 35px;
+        margin-top: 20px;
     }
 
     .pre-title2,
     .pre-title3 {
         font-size: 20px;
+    }
+
+    .pre-title2 {
+        padding-top: 5px;
     }
 
     .l2>button {
@@ -848,7 +854,7 @@ footer>p {
 
     .pre-title2 {
         font-size: 10px;
-        margin-top: 5px;
+        padding-top: 0;
     }
 
     .l2>button {
@@ -905,8 +911,10 @@ footer>p {
     }
 
     .pre-title3 {
+        position: relative;
+        top: -10px;
         font-size: 15px;
-        margin-bottom: 10px;
+        margin: 0;
     }
 
     .r3>div>img {
