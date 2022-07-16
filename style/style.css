@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-}
-
-body {
     font-family: 'Poppins', sans-serif;
 }
 
-/*header nav bar css*/
+/*header nav bar*/
 .nav-bar-mob,
 .nav-icon {
     display: none;
@@ -77,7 +74,7 @@ header>a:hover {
     transform: scale(1.1);
 }
 
-/*home css*/
+/*home*/
 
 #home {
     display: flex;
@@ -85,12 +82,14 @@ header>a:hover {
     justify-content: center;
     background-color: #dfecf2;
     padding-top: 69px;
+    padding-bottom: 40px;
 }
 
 .hero1,
 .hero2 {
     height: 40%;
     width: 100%;
+    margin-right: 30px;
     -webkit-user-drag: none;
     user-select: none;
 }
@@ -128,7 +127,7 @@ header>a:hover {
 
 .pre-title2 {
     padding-bottom: 15px;
-    text-align: center;
+    width: 100%;
 }
 
 .wrapper1 {
@@ -168,21 +167,23 @@ button {
     background-color: rgb(38, 38, 255);
 }
 
-/*about css*/
+/*about*/
 
 #about {
     background-color: #f4e7e1;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 40px 0;
 }
 
 .l2 {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
-    width: 125%;
+    width: 128%;
+    margin-left: 125px;
 }
 
 .r2 {
@@ -197,7 +198,7 @@ button {
     border: 2px solid black;
     background-color: #fdb391;
     font-size: 15px;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
     cursor: pointer;
     transition: 0.8s;
 }
@@ -207,7 +208,7 @@ button {
 }
 
 
-/*feautures css*/
+/*feautures*/
 
 #feautures {
     display: flex;
@@ -228,10 +229,11 @@ button {
     align-items: center;
     justify-content: space-between;
     margin-top: 15px;
+    padding-bottom: 20px;
 }
 
 .box-container>div {
-    padding: 2% 2%;
+    padding: 1% 2% 2% 2%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -259,7 +261,7 @@ button {
 
 .box-container>div>button {
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 15px;
     border: 2px solid black;
     padding: 0 10px;
     font-size: 14px;
@@ -285,13 +287,15 @@ button {
 
 .box-container>div>p {
     font-size: 25px;
+    padding: 0;
 }
 
 .box-container>div>h3 {
     font-size: 30px;
+    margin-top: 10px;
 }
 
-/*records css*/
+/*records*/
 
 
 #records {
@@ -300,6 +304,7 @@ button {
     align-items: center;
     justify-content: center;
     background-color: #e4eef7;
+    padding: 10px 0;
 }
 
 .box-wrapper {
@@ -319,7 +324,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 15%;
+    width: 16%;
     padding: 3% 0;
     margin: 0 2% 3% 2%;
     border-radius: 10px;
@@ -346,11 +351,12 @@ button {
 }
 
 .r3>div>p {
-    font-size: 25px;
+    font-size: 21px;
     width: 60%;
     margin-top: 5px;
     line-height: 30px;
     text-align: center;
+    height: 60px;
 }
 
 .r3 {
@@ -361,7 +367,7 @@ button {
     flex-direction: row;
 }
 
-/*footer css*/
+/*footer*/
 
 footer {
     background-color: honeydew;
@@ -432,8 +438,8 @@ footer>p {
 .icon8,
 .icon9,
 .icon10 {
-    height: 64px;
-    width: 64px;
+    height: 50px;
+    width: 50px;
     cursor: pointer;
 }
 
@@ -442,8 +448,8 @@ footer>p {
 }
 
 
-/*media 999 --> 370*/
-@media (max-width: 999px) and (min-width: 370px) {
+/*media 1000px*/
+@media (max-width: 1000px) {
 
     .nav-icon {
         display: flex;
@@ -457,6 +463,10 @@ footer>p {
     header>a {
         font-size: 23px;
         padding-left: 15px;
+    }
+
+    .hero2 {
+        margin-right: 0;
     }
 
     .nav-bar-mob {
@@ -505,12 +515,11 @@ footer>p {
     }
 
 
-    /*home css*/
+    /*home*/
     #home {
         flex-direction: column;
         width: 100%;
-        padding-top: 0;
-        padding-top: 0;
+        padding: 0;
     }
 
     .r1 {
@@ -526,11 +535,12 @@ footer>p {
 
     .pre-title1 {
         text-align: center;
+        padding: 0 20px 5px 20px;
     }
 
     .wrapper1 {
         align-items: center;
-        padding-bottom: 15px;
+        padding-bottom: 20px;
     }
 
     .wrapper1>input {
@@ -547,23 +557,27 @@ footer>p {
         transition: 0.8s;
     }
 
-    /*about css*/
+    /*about*/
     #about {
         flex-direction: column-reverse;
         width: 100%;
+        padding: 0;
     }
 
     .l2 {
         width: 100%;
         margin-top: -30px;
+        margin-left: 0;
+        align-items: center;
     }
 
     .pre-title2,
     .pre-title3 {
-        padding: 0 10px 15px 10px;
+        padding: 0px 20px 15px 20px;
+        text-align: center;
     }
 
-    /*feautures css*/
+    /*feautures*/
     #feautures {
         width: 100%;
     }
@@ -574,17 +588,17 @@ footer>p {
 
     .title3 {
         text-align: center;
-        padding: 0 10px;
+        padding: 10px;
         line-height: 45px;
-        margin-bottom: 5px;
     }
 
     .box-container>div {
-        width: 90%;
+        width: 80%;
+        padding: 1% 2% 8% 2%;
     }
 
     .box-container>div>button {
-        margin-bottom: 10px;
+        margin: 10px 0;
     }
 
     .box1 {
@@ -595,7 +609,7 @@ footer>p {
         margin-right: 0;
     }
 
-    /*records css*/
+    /*records*/
     #records {
         width: 100%;
     }
@@ -611,18 +625,20 @@ footer>p {
 
     .pre-title3 {
         padding: 0 10px;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
     }
 
     .r3>div {
-        width: 60%;
+        width: 50%;
     }
 
     .r3>div>p {
         width: 90%;
+        height: unset;
     }
 
-    /*footer css*/
+
+    /*footer*/
     .wrapper3 {
         flex-direction: column;
     }
@@ -647,61 +663,25 @@ footer>p {
     }
 }
 
-/*media 370 --> 300*/
+/*media 370px*/
 @media (max-width: 370px) and (min-width: 300px) {
     .nav-icon {
-        display: flex;
-        margin-right: 15px;
         height: 25px;
         width: 25px;
-        cursor: pointer;
-        transition: 1s;
     }
 
     .nav-bar-mob {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        position: fixed;
-        top: 60.4px;
-        width: 100%;
-        left: -100%;
         height: 190px;
-        background-color: rgb(251, 255, 251);
-        transition: 1.5s;
-    }
-
-
-    .title1,
-    .title2,
-    .title3,
-    .title4 {
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-left: 0;
     }
 
     .pre-title1,
     .pre-title2,
     .pre-title3 {
-        margin-left: 0;
-    }
-
-    .nav-bar-mob-add {
-        left: 0;
+        text-align: center;
     }
 
     .nav-bar-mob>a {
         font-size: 18px;
-        padding: 10px 5px;
-        transition: 1s;
-        margin-left: 10px;
-        font-weight: 400;
-    }
-
-    .nav-bar-desk {
-        display: none;
     }
 
     header>a {
@@ -709,60 +689,33 @@ footer>p {
         padding-left: 12px;
     }
 
-    /*home css*/
-    #home {
-        flex-direction: column;
-        width: 100%;
-        padding-top: 0;
-    }
-
-    .r1 {
-        align-items: center;
-        justify-content: center;
-    }
+    /*home*/
 
     .title1 {
-        text-align: center;
         font-size: 35px;
         line-height: 35px;
         margin-top: 10px;
     }
 
     .pre-title1 {
-        text-align: center;
         font-size: 20px;
+        padding: 0 20px 5px 20px;
     }
 
     .wrapper1 {
-        align-items: center;
         flex-direction: column;
-        padding-bottom: 15px;
     }
 
     .wrapper1>input {
         width: 100%;
         margin-right: 10px;
-        padding: 0 5px;
     }
 
     .wrapper1>button {
-        background-color: rgb(87, 87, 253);
-        color: white;
-        width: 80px;
         margin: -10px 0 5px 5px;
-        cursor: pointer;
-        transition: 0.8s;
     }
 
-    /*about css*/
-    #about {
-        flex-direction: column-reverse;
-        width: 100%;
-    }
-
-    .l2 {
-        width: 100%;
-    }
+    /*about*/
 
     .title2 {
         font-size: 35px;
@@ -771,31 +724,26 @@ footer>p {
     .pre-title2,
     .pre-title3 {
         font-size: 20px;
-        padding-bottom: 5px;
     }
 
-    /*feautures css*/
-    #feautures {
-        width: 100%;
+    .l2>button {
+        margin-top: 0;
     }
 
-    .box-container {
-        flex-direction: column;
-    }
+    /*feautures*/
 
     .title3 {
-        text-align: center;
         font-size: 35px;
     }
 
     .pre-title3 {
         font-size: 20px;
         padding: 0 10px;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
     }
 
     .box-container>div {
-        width: 90%;
+        padding-bottom: 30px;
     }
 
     .box-container>div>p {
@@ -806,10 +754,6 @@ footer>p {
         font-size: 20px;
     }
 
-    .box-container>div>button {
-        margin-bottom: 10px;
-    }
-
     .icon2,
     .icon1,
     .icon3 {
@@ -817,26 +761,8 @@ footer>p {
         width: 90%;
     }
 
-    .box1 {
-        margin-left: 0;
-    }
-
-    .box3 {
-        margin-right: 0;
-    }
-
-    /*records css*/
-    #records {
-        width: 100%;
-    }
-
-    .r3 {
-        flex-direction: column;
-        margin-bottom: 10px;
-    }
-
+    /*records*/
     .title4 {
-        text-align: center;
         font-size: 35px;
     }
 
@@ -848,37 +774,20 @@ footer>p {
         width: 95%;
     }
 
-    /*footer css*/
-    .wrapper3 {
-        flex-direction: column;
-    }
-
-    .l4 {
-        margin-left: 0;
-    }
-
-    .l4>pre {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
+    /*footer*/
     .r4 {
-        margin: 0;
         flex-direction: column;
     }
 
 
     .l4>a {
         font-size: 20px;
-        margin: 10px 0 0 0;
     }
 }
 
 
-/*media 300 --> 100*/
-@media (max-width: 300px) and (min-width: 100px) {
+/*media 300px*/
+@media (max-width: 300px) {
 
     header>a {
         display: none
@@ -889,114 +798,50 @@ footer>p {
     }
 
     .nav-icon {
-        display: flex;
-        height: 25px;
-        width: 25px;
         margin: 5px 0;
-        cursor: pointer;
-        transition: 1s;
     }
 
     .nav-bar-mob {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        position: fixed;
         top: 35px;
-        width: 100%;
-        left: -100%;
         height: 170px;
-        background-color: rgb(251, 255, 251);
-        transition: 1.5s;
-    }
-
-    .title1,
-    .title2,
-    .title3,
-    .title4 {
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-left: 0;
-    }
-
-    .pre-title1,
-    .pre-title2,
-    .pre-title3 {
-        margin-left: 0;
-    }
-
-    .nav-bar-mob-add {
-        left: 0;
     }
 
     .nav-bar-mob>a {
         font-size: 15px;
-        padding: 10px 5px;
-        transition: 1s;
-        margin-left: 10px;
-        font-weight: 400;
     }
 
-    .nav-bar-desk {
-        display: none;
-    }
-
-    /*home css*/
-    #home {
-        flex-direction: column;
-        width: 100%;
-        padding-top: 0;
-    }
-
-    .r1 {
-        align-items: center;
-        justify-content: center;
-    }
+    /*home*/
 
     .title1 {
-        text-align: center;
-        font-size: 15px;
+        font-size: 20px;
+        margin-bottom: 0;
     }
 
     .pre-title1 {
-        text-align: center;
         font-size: 10px;
+        padding: 0px 20px 9px 20px;
+        margin-top: 0;
     }
 
     .wrapper1 {
-        align-items: center;
-        flex-direction: column;
-        padding-bottom: 15px;
         margin-top: 0;
     }
 
     .wrapper1>input {
         width: 80%;
-        padding: 0 5px;
         font-size: 10px;
+        height: 30px;
     }
 
     .wrapper1>button {
-        background-color: rgb(87, 87, 253);
-        color: white;
         width: 50%;
-        margin: -10px 0 5px 0;
+        margin: -10px 0 5px 2px;
         cursor: pointer;
         font-size: 10px;
-        transition: 0.8s;
+        height: 30px;
     }
 
-    /*about css*/
-    #about {
-        flex-direction: column-reverse;
-        width: 100%;
-    }
-
-    .l2 {
-        width: 100%;
-    }
-
+    /*about*/
     .title2 {
         font-size: 20px;
     }
@@ -1004,56 +849,47 @@ footer>p {
     .pre-title2 {
         font-size: 10px;
         margin-top: 5px;
-        padding-bottom: 5px;
     }
 
     .l2>button {
         padding: 0px 5px;
         font-size: 10px;
+        height: 30px;
+        margin-top: -2px;
     }
 
-    /*feautures css*/
-    #feautures {
-        width: 100%;
-    }
-
+    /*feautures*/
     .box-container {
-        flex-direction: column;
         margin-bottom: 5px;
     }
 
     .title3 {
-        text-align: center;
         font-size: 20px;
-    }
-
-    .pre-title3 {
-        font-size: 20px;
-        padding: 0 10px;
-        margin-bottom: 5px;
     }
 
     .box-container {
         margin-top: 5px;
+        padding: 0 20px;
     }
 
     .box-container>div {
-        width: 90%;
+        padding: 8% 2%;
+    }
+
+    .box-container>div>h3 {
+        margin-top: 0;
+        font-size: 20px;
     }
 
     .box-container>div>p {
         font-size: 10px;
-        padding: 10px 7px;
-    }
-
-    .box-container>div>h3 {
-        font-size: 20px;
+        padding: 5px 7px;
     }
 
     .box-container>div>button {
-        margin-bottom: 10px;
         margin-top: 5px;
         font-size: 10px;
+        height: 30px;
     }
 
     .icon2,
@@ -1062,35 +898,15 @@ footer>p {
         display: none;
     }
 
-    .box1 {
-        margin-left: 0;
-    }
-
-    .box3 {
-        margin-right: 0;
-    }
-
-    /*records css*/
-    #records {
-        width: 100%;
-    }
-
-    .r3 {
-        flex-direction: column;
-        margin-bottom: 10px;
-    }
+    /*records*/
 
     .title4 {
-        text-align: center;
         font-size: 20px;
     }
 
     .pre-title3 {
         font-size: 15px;
-    }
-
-    .r3>div {
-        width: 70%;
+        margin-bottom: 10px;
     }
 
     .r3>div>img {
@@ -1108,37 +924,20 @@ footer>p {
         text-align: center;
     }
 
-    /*footer css*/
-    .wrapper3 {
-        flex-direction: column;
+    /*footer*/
+    pre {
+        margin-top: 10px;
+    }
+
+    .icon7,
+    .icon8,
+    .icon9,
+    .icon10 {
+        height: 40px;
+        width: 40px;
     }
 
     .l4 {
         margin-left: 0;
-    }
-
-    .l4>pre {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .l4>a {
-        font-size: 20px;
-    }
-
-    .l4 {
-        margin-left: 0;
-    }
-
-    .r4 {
-        margin: 0;
-        flex-direction: column;
-    }
-
-    .l4>a {
-        font-size: 20px;
-        margin: 10px 0 0 0;
     }
 }
